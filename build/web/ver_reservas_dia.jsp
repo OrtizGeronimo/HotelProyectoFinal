@@ -1,6 +1,6 @@
 <%@page import="Logica.Reserva"%>
 <%@page import="java.util.List"%>
-
+<%@page import="java.text.SimpleDateFormat"%>
 <!doctype html>
 <html lang="es">
     <head>
@@ -53,10 +53,10 @@
                                     <th>ID no.</th>
                                     <th>Fecha CheckIn</th>
                                     <th>Fecha CheckOut</th>
+                                    <th>Cantidad de Personas</th>
                                     <th>Habitación</th>
-
                                     <th>&nbsp;</th>
-                                    <th>&nbsp;</th>
+                                    
                                 </tr>
                             </thead>
                             <tbody>
@@ -68,6 +68,7 @@
                                     <th scope="row"><%= e.getIdReserva() %></th>
                                     <td><%= new SimpleDateFormat("dd/MM/yyyy").format(e.getFechaCheckIn()) %></td>
                                     <td><%= new SimpleDateFormat("dd/MM/yyyy").format(e.getFechaCheckOut()) %></td>
+                                    <td><%= e.getCantPersonas() %></td>
                                     <td><%= e.getHabitacion().getNum() %></td>
 
                                     <td>
@@ -77,12 +78,7 @@
                                             <button type="submit"> <span aria-hidden="true"><i class="fa fa-close close"></i></span> </button>
                                         </form>
                                     </td>
-                                    <td>
-                                        <form action="SvModificarReserva" method="POST">
-                                            <input type="hidden" name="id" value="<%= e.getIdReserva() %>" >
-                                            <button type="submit"> <span aria-hidden="true"><i class="fa fa-pencil-square-o"></i></span> </button>
-                                        </form>
-                                    </td>
+                                    
                                 </tr>
                                 <%
                                    }

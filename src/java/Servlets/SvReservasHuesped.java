@@ -31,8 +31,12 @@ public class SvReservasHuesped extends HttpServlet {
             throws ServletException, IOException {
         Controladora control = new Controladora();
         int id = Integer.parseInt(request.getParameter("id_huesped"));
+        String fechaDesde = request.getParameter("fechaDesde");
+        String fechaHasta = request.getParameter("fechaHasta");
         Huesped h = control.traerHuesped(id);
-        List<Reserva> listaReservas = h.getListaReservas();
+
+        List<Reserva> listaReservas = control.traerReservasPeriodo(h, fechaDesde, fechaHasta);
+
         request.getSession().setAttribute("listaReservas", listaReservas);
         response.sendRedirect("ver_reservas_huespedes.jsp");
     }

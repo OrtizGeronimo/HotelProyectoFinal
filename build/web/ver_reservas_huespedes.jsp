@@ -52,9 +52,9 @@
                                     %>
                                 </select>
                                 <div class="name">Período Desde</div>
-                                <input class="input--style-5" type="text">
+                                <input class="input--style-5" type="text" name="fechaDesde">
                                 <div class="name">Hasta</div>
-                                <input class="input--style-5" type="text">
+                                <input class="input--style-5" type="text" name="fechaHasta">
                             </div>
                         </div>
                         <button type="submit">Buscar</button>
@@ -72,7 +72,9 @@
                                     <th>ID no.</th>
                                     <th>Fecha CheckIn</th>
                                     <th>Fecha CheckOut</th>
+                                    <th>Cantidad de Personas</th>
                                     <th>Habitación</th>
+                                    <th>Fecha de Reserva</th>
 
 
                                 </tr>
@@ -86,8 +88,9 @@
                                     <th scope="row"><%= e.getIdReserva() %></th>
                                     <td><%= new SimpleDateFormat("dd/MM/yyyy").format(e.getFechaCheckIn()) %></td>
                                     <td><%= new SimpleDateFormat("dd/MM/yyyy").format(e.getFechaCheckOut()) %></td>
+                                    <td><%= e.getCantPersonas() %></td>
                                     <td><%= e.getHabitacion().getNum() %></td>
-
+                                    <td><%= new SimpleDateFormat("dd/MM/yyyy").format(e.getFechaCreacionReserva()) %></td>
 
                                 </tr>
                                 <%

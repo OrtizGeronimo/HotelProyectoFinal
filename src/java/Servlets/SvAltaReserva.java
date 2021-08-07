@@ -45,6 +45,7 @@ public class SvAltaReserva extends HttpServlet {
             String fechaCheckOutString = request.getParameter("fechaCheckOut");
             Date fechaCheckOut = formato.parse(fechaCheckOutString);
             Date fechaActual = new Date();
+            
             formato.format(fechaActual);
             boolean reservo = control.altaReserva(idUsuario,idHuesped,fechaCheckIn,fechaCheckOut,cantidad,tipo,fechaActual);
             if (reservo) {

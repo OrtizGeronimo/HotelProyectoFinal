@@ -34,6 +34,7 @@ public class SvReservasEmpleado extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
         Controladora control = new Controladora();
         int id = Integer.parseInt(request.getParameter("id_empleado"));
         Empleado h = control.traerEmpleado(id);

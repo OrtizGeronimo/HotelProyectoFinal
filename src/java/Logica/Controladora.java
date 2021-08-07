@@ -1,10 +1,13 @@
 package Logica;
 
 import Persistencia.ControladoraPersistencia;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Controladora {
 
@@ -67,7 +70,9 @@ public class Controladora {
 
         boolean hacerReserva = true;
         Habitacion habitacion = null;
-
+        fechaCreacion.setHours(0);
+        fechaCreacion.setMinutes(0);
+        fechaCreacion.setSeconds(0);
         for (Habitacion habitaciones : control.traerHabitaciones()) {
             hacerReserva = true;
             if (habitaciones.getTipo().getNombreTipoHabitacion().equalsIgnoreCase(tipo)) {
@@ -207,6 +212,25 @@ public class Controladora {
     public List<Reserva> traerReservas() {
         return control.traerReservas();
     }
+    public List<Reserva> traerReservasPeriodo(Huesped h, String fechaDesde, String fechaHasta) {
+        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+        Date desde = new Date();
+        Date hasta = new Date();
+        try {
+             desde = formato.parse(fechaDesde);
+             hasta = formato.parse(fechaHasta);
+        } catch (ParseException ex) {
+            Logger.getLogger(Controladora.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        List<Reserva> listaReservaPeriodo = new ArrayList<>();
+        for (Reserva reservas : h.getListaReservas()) {
+            if ((reservas.getFechaCreacionReserva().after(desde) || formato.format(reservas.getFechaCreacionReserva()).equals(formato.format(desde))) && (reservas.getFechaCreacionReserva().before(hasta) || formato.format(reservas.getFechaCreacionReserva()).equals(formato.format(hasta)))) {
+                listaReservaPeriodo.add(reservas);
+            } 
+        }
+        return listaReservaPeriodo;
+    }
 
     /*
         BORRAR
@@ -233,5 +257,7 @@ public class Controladora {
     public void modificarEmpleado(Empleado e) {
         control.modificarEmpleado(e);
     }
+
+    
 
 }
