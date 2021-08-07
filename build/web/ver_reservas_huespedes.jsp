@@ -51,9 +51,16 @@
                                         }
                                     %>
                                 </select>
+                                <div class="name">Período Desde</div>
+                                <input class="input--style-5" type="text">
+                                <div class="name">Hasta</div>
+                                <input class="input--style-5" type="text">
                             </div>
                         </div>
                         <button type="submit">Buscar</button>
+                        <div class="input-group">
+
+                        </div>
                 </form>
             </div>
             <div class="row">
@@ -67,7 +74,7 @@
                                     <th>Fecha CheckOut</th>
                                     <th>Habitación</th>
 
-                                   
+
                                 </tr>
                             </thead>
                             <tbody>
@@ -81,7 +88,7 @@
                                     <td><%= new SimpleDateFormat("dd/MM/yyyy").format(e.getFechaCheckOut()) %></td>
                                     <td><%= e.getHabitacion().getNum() %></td>
 
-                                     
+
                                 </tr>
                                 <%
                                    }
