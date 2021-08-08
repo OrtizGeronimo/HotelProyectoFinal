@@ -22,31 +22,36 @@
                 usuario = usuario.toUpperCase();
         %>
         <div class="contenedor">
+            <div class="cerrar-sesion">
+                <form action="SvCerrarSesion" method="GET">
+                    <a href="SvCerrarSesion">Cerrar Sesión</a>
+                </form>
+            </div>    
             <div class="centro">
 
                 <h1 class="bienvenida">BIENVENIDO/A, <%= usuario %>!</h1>
-                
+
                 <div class="container-lista">
                     <ul class="lista">
                         <li>Reservas
                             <ul class="interior">
                                 <form action="SvConsultaReserva" method="GET">
-                                <li><a href="SvConsultaReserva">Realizar Reserva</a></li>
+                                    <li><a href="SvConsultaReserva">Realizar Reserva</a></li>
                                 </form>
                                 <form action="SvReservas" method="GET">
-                                <li><a href="SvReservas">Ver Reservas</a></li>
+                                    <li><a href="SvReservas">Ver Reservas</a></li>
                                 </form>
                             </ul>
                         </li>
                         <li>Huespedes
                             <ul class="interior">
                                 <li><a href="registro_huesped.jsp">Registrar Huesped</a></li>
-                               
+
                                 <form action="SvConsultaHuesped" method="GET">
-                                <li><a href="SvConsultaHuesped">Ver Huespedes</a></li>
+                                    <li><a href="SvConsultaHuesped">Ver Huespedes</a></li>
                                 </form>
                                 <form action="SvConsultaHuespedReserva" method="GET">
-                                <li><a href="SvConsultaHuespedReserva">Ver Reservas de Huesped</a></li>
+                                    <li><a href="SvConsultaHuespedReserva">Ver Reservas de Huesped</a></li>
                                 </form>
                             </ul>
                         </li>
@@ -54,11 +59,11 @@
                             <ul class="interior">
                                 <li><a href="registro_empleado.jsp">Registrar Empleado</a></li>
                                 <form action="SvConsultaEmpleado" method="GET">
-                                <li><a href="SvConsultaEmpleado">Ver Empleados</a></li>
+                                    <li><a href="SvConsultaEmpleado">Ver Empleados</a></li>
                                 </form>
-                               
+
                                 <form action="SvConsultaEmpleadoReserva" method="GET">
-                                <li><a href="SvConsultaEmpleadoReserva">Ver Reservas de Empleado</a></li>
+                                    <li><a href="SvConsultaEmpleadoReserva">Ver Reservas de Empleado</a></li>
                                 </form>
                             </ul>
                         </li>

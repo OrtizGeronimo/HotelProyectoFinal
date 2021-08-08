@@ -25,7 +25,16 @@ body {
 .interior li:hover{
     color: #9C968F;
 }
-
+.cerrar-sesion{
+    margin: 5px;
+    text-align: right;
+}
+.cerrar-sesion a {
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    font-size: 25px;
+}
 
 .centro{
     position: absolute;
