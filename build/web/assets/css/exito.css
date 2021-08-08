@@ -16,12 +16,18 @@
 .title { 
   font-weight: bold;
   color: #e7e7e7;
+  width: 80%;
+  text-align: center;
 }
 
 .symbol {
   -webkit-text-stroke: 13px #212121;
   font-size: 150px;
   color: #17801F;
+}
+
+.fa-times-circle{
+    color:#DE3636;
 }
 
 .text { 

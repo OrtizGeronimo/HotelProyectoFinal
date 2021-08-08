@@ -52,6 +52,7 @@ public class SvAltaReserva extends HttpServlet {
                 response.sendRedirect("registro_exitoso.jsp");
             } else {
                 response.sendRedirect("error_reserva.jsp");
+                request.getSession().setAttribute("tipo", tipo);
             }
             
         } catch (ParseException ex) {
