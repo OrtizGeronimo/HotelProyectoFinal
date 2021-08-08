@@ -63,13 +63,13 @@
                                         <td>
                                             <form action="SvEliminarEmpleado" method="POST">
                                                     <input type="hidden" name="id" value="<%= e.getId() %>" >
-                                                    <button type="submit"> <span aria-hidden="true"><i class="fa fa-close close"></i></span> </button>
+                                                    <button type="submit" class="boton"> <span aria-hidden="true"><i class="fa fa-close close"></i></span> </button>
                                             </form>
                                         </td>
                                         <td>
                                             <form action="SvModificarEmpleado" method="POST">
                                                     <input type="hidden" name="id" value="<%= e.getId() %>" >
-                                                    <button type="submit"> <span aria-hidden="true"><i class="fa fa-pencil-square-o"></i></span> </button>
+                                                    <button type="submit" class="boton"> <span aria-hidden="true"><i class="fa fa-pencil-square-o fa-lg"></i></span> </button>
                                             </form>
                                         </td>
                                     </tr>

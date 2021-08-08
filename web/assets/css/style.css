@@ -266,6 +266,21 @@ select {
 select {
   word-wrap: normal; }
 
+.boton{
+    background: #fff;
+    border: none;
+}
+
+.close{
+    color: #EC0F0F !important;
+}
+.fa-pencil-square-o{
+    color:#707070;
+}
+.fa-pencil-square-o:hover{
+    color:#000;
+}
+
 button,
 [type="button"],
 [type="reset"],

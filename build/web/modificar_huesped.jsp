@@ -102,6 +102,9 @@
                                 <input type="hidden" name="id" value="<%= h.getId() %>">
                                 <button class="btn btn--radius-2 btn--red" type="submit">Modificar</button>
                             </div>
+                                <div class="flecha">
+                            <a href="ver_huespedes.jsp"><i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i></a>
+                        </div>
                         </form>
                     </div>
                 </div>

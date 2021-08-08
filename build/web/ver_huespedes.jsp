@@ -60,13 +60,13 @@
                                         <td>
                                             <form action="SvEliminar" method="POST">
                                                     <input type="hidden" name="id" value="<%= h.getId() %>" >
-                                                    <button type="submit"> <span aria-hidden="true"><i class="fa fa-close close"></i></span> </button>
+                                                    <button type="submit" class="boton"> <span aria-hidden="true"><i class="fa fa-close close"></i></span> </button>
                                             </form>
                                         </td>
                                         <td>
                                             <form action="SvModificarHuesped" method="POST">
                                                     <input type="hidden" name="id" value="<%= h.getId() %>" >
-                                                    <button type="submit"> <span aria-hidden="true"><i class="fa fa-pencil-square-o"></i></span> </button>
+                                                    <button type="submit" class="boton"> <span aria-hidden="true"><i class="fa fa-pencil-square-o fa-lg"></i></span> </button>
                                             </form>
                                         </td>
                                     </tr>

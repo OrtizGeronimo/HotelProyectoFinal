@@ -75,7 +75,7 @@
                                         <form action="SvEliminarReserva" method="POST">
                                             <input type="hidden" name="fechaABuscar" value="<%= mySession.getAttribute("fecha")  %>" >
                                             <input type="hidden" name="id" value="<%= e.getIdReserva() %>" >
-                                            <button type="submit"> <span aria-hidden="true"><i class="fa fa-close close"></i></span> </button>
+                                            <button type="submit" class="boton"> <span aria-hidden="true"><i class="fa fa-close close"></i></span> </button>
                                         </form>
                                     </td>
                                     
