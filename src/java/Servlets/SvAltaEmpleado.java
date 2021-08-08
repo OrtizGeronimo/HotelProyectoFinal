@@ -48,7 +48,7 @@ public class SvAltaEmpleado extends HttpServlet {
             Controladora control = new Controladora();
             control.altaEmpleado(nombre, apellido, dni, cargo, direccion, fechaNac,usuario,psw);
             
-            response.sendRedirect("inicio.jsp");
+            response.sendRedirect("registro_exitoso.jsp");
         } catch (ParseException ex) {
             Logger.getLogger(SvAltaHuesped.class.getName()).log(Level.SEVERE, null, ex);
         }

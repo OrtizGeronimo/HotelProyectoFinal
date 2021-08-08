@@ -41,7 +41,7 @@
                                 <input class="input--style-5" type="text" name="fechaABuscar" value="<%= mySession.getAttribute("fecha")%>">
                             </div>
                         </div>
-                        <button type="submit">Buscar</button>
+                        <button type="submit" class="buscar_fecha">Buscar</button>
                 </form>
             </div>
             <div class="row">
@@ -89,7 +89,7 @@
                     </div>
                 </div>
             </div>
-            <a href="inicio.jsp">Volver</a>
+            <a href="inicio.jsp" class="boton_volver">Volver</a>
         </div>
     </section>
 

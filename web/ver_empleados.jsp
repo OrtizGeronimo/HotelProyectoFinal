@@ -82,7 +82,7 @@
                         </div>
                     </div>
                 </div>
-                                <a href="inicio.jsp">Volver</a>
+                                <a href="inicio.jsp" class="boton_volver">Volver</a>
             </div>
         </section>
 

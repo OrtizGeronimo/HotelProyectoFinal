@@ -49,7 +49,7 @@ public class SvAltaReserva extends HttpServlet {
             formato.format(fechaActual);
             boolean reservo = control.altaReserva(idUsuario,idHuesped,fechaCheckIn,fechaCheckOut,cantidad,tipo,fechaActual);
             if (reservo) {
-                response.sendRedirect("inicio.jsp");
+                response.sendRedirect("registro_exitoso.jsp");
             } else {
                 response.sendRedirect("error_reserva.jsp");
             }

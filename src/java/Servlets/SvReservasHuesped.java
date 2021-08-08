@@ -33,6 +33,8 @@ public class SvReservasHuesped extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id_huesped"));
         String fechaDesde = request.getParameter("fechaDesde");
         String fechaHasta = request.getParameter("fechaHasta");
+        request.getSession().setAttribute("fechaDesde", fechaDesde);
+        request.getSession().setAttribute("fechaHasta", fechaHasta);
         Huesped h = control.traerHuesped(id);
 
         List<Reserva> listaReservas = control.traerReservasPeriodo(h, fechaDesde, fechaHasta);

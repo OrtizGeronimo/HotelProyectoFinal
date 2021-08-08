@@ -111,8 +111,8 @@
                         <div>
                             <button class="btn btn--radius-2 btn--red" type="submit">Registrar</button>
                         </div>
-                        <div>
-                            <a href="inicio.jsp"><i class="fa fa-arrow-left fa-lg" aria-hidden="true"></i></a>
+                        <div class="flecha">
+                            <a href="inicio.jsp"><i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i></a>
                         </div>
                     </form>
                 </div>

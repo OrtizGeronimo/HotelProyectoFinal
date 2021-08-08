@@ -59,6 +59,55 @@ body {
   text-align: left;
   background-color: #fff; }
 
+ .boton_volver{
+    margin-top: 20px;
+    display: block;
+    width: 115px;
+    height: 25px;
+    background: #627363;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    line-height: 25px;
+    transition: color 0.5s;
+  }
+
+  .boton_volver:hover{
+      color: #424642;
+  }  
+  .input_ver{
+      margin-right: 15px;
+  }
+  .select_ver{
+      margin-right: 15px;
+  }
+  .input_emp{
+      height: 100%;
+  }
+  .name{
+      margin-right: 12px;
+  }
+  .value{
+      margin-right: 15px;
+  } 
+  
+  .input--style-5{
+      outline: none;
+  }
+  .buscar_fecha{
+      background: #627363;
+      color: #fff;
+      border-radius: 2px;
+      border: none;
+      font-weight: bold;
+      transition: color 0.5s;
+  }
+  
+  .buscar_fecha:hover {
+      color: #424642;
+  }
+  
 [tabindex="-1"]:focus {
   outline: 0 !important; }
 
@@ -2825,6 +2874,9 @@ input[type="button"].btn-block {
     clip: rect(0, 0, 0, 0);
     pointer-events: none; }
 
+ 
+  
+  
 .input-group {
   position: relative;
   display: -webkit-box;

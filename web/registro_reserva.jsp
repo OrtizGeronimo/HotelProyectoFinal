@@ -53,7 +53,8 @@
                                 <div class="name">Huesped</div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <select name="id_huesped">
+                                        <div class="col-2 div_select">
+                                        <select name="id_huesped" class="id_huesped">
                                             <%
                                                 for(Huesped h: listaHuesped){
                                             %>
@@ -63,6 +64,7 @@
                                                 }
                                             %>
                                         </select>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -79,7 +81,7 @@
                                     </div>
                                     <div class="col-2">
                                         <div class="input-group-desc">
-                                            <select name="tipo" id="tipo">
+                                            <select name="tipo" id="tipo" class="id_huesped">
                                                 
                                             </select>
                                             <label class="label--desc">Tipo de Habitación</label>
@@ -110,8 +112,8 @@
                             <div>
                                 <button class="btn btn--radius-2 btn--red" type="submit">Reservar</button>
                             </div>
-                            <div>
-                                <a href="inicio.jsp"><i class="fa fa-arrow-left fa-lg" aria-hidden="true"></i></a>
+                            <div class="flecha">
+                                <a href="inicio.jsp" ><i class="fa fa-arrow-left fa-2x" aria-hidden="true"></i></a>
                             </div>
                         </form>
                     </div>

@@ -27,6 +27,7 @@
         } else {
             List<Empleado> listaEmpleado = (List) request.getSession().getAttribute("listaEmpleados");
             List<Reserva> listaReservas = (List) request.getSession().getAttribute("listaReservas");
+           
         %>
         <section class="ftco-section">
             <div class="container">
@@ -39,9 +40,11 @@
                     <div class="form-row">
                         <div class="name">Empleado</div>
                         <div class="value">
-                            <div class="input-group">
-                                <select name="id_empleado">
+                            <div class="input-group input_emp">
+                                <select name="id_empleado" class="select_ver">
+                                    
                                     <option></option>
+                                   
                                     <%
                                         for(Empleado h: listaEmpleado){
                                     %>
@@ -53,7 +56,7 @@
                                 </select>
                             </div>
                         </div>
-                        <button type="submit">Buscar</button>
+                        <button type="submit" class="buscar_fecha">Buscar</button>
                 </form>
             </div>
             <div class="row">
@@ -92,7 +95,7 @@
                     </div>
                 </div>
             </div>
-            <a href="inicio.jsp">Volver</a>
+            <a href="inicio.jsp" class="boton_volver">Volver</a>
         </div>
     </section>
 

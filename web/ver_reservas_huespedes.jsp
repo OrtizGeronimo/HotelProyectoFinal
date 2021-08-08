@@ -40,7 +40,7 @@
                         <div class="name">Huesped</div>
                         <div class="value">
                             <div class="input-group">
-                                <select name="id_huesped">
+                                <select name="id_huesped" class="select_ver">
                                     <option></option>
                                     <%
                                         for(Huesped h: listaHuesped){
@@ -52,12 +52,12 @@
                                     %>
                                 </select>
                                 <div class="name">Período Desde</div>
-                                <input class="input--style-5" type="text" name="fechaDesde">
+                                <input class="input--style-5 input_ver" type="text" name="fechaDesde" value="<%= mySession.getAttribute("fechaDesde")%>">
                                 <div class="name">Hasta</div>
-                                <input class="input--style-5" type="text" name="fechaHasta">
+                                <input class="input--style-5" type="text" name="fechaHasta"value="<%= mySession.getAttribute("fechaHasta")%>">
                             </div>
                         </div>
-                        <button type="submit">Buscar</button>
+                        <button type="submit" class="buscar_fecha">Buscar</button>
                         <div class="input-group">
 
                         </div>
@@ -102,7 +102,7 @@
                     </div>
                 </div>
             </div>
-            <a href="inicio.jsp">Volver</a>
+            <a href="inicio.jsp" class="boton_volver">Volver</a>
         </div>
     </section>
 

@@ -3,8 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/yeron/Documents/NetBeansProjects/ProyectoFinalHotel2/src/java/Servlets/SvAltaReserva.java</file>
+            <file>file:/C:/Users/yeron/Documents/NetBeansProjects/ProyectoFinalHotel2/src/java/Logica/Controladora.java</file>
+            <file>file:/C:/Users/yeron/Documents/NetBeansProjects/ProyectoFinalHotel2/src/java/Servlets/SvReservas.java</file>
             <file>file:/C:/Users/yeron/Documents/NetBeansProjects/ProyectoFinalHotel2/src/java/Servlets/SvReservasHuesped.java</file>
-            <file>file:/C:/Users/yeron/Documents/NetBeansProjects/ProyectoFinalHotel2/src/java/Servlets/SvReservasEmpleado.java</file>
             <file>file:/C:/Users/yeron/Documents/NetBeansProjects/ProyectoFinalHotel2/src/java/Servlets/SvConsultaHuespedReserva.java</file>
             <file>file:/C:/Users/yeron/Documents/NetBeansProjects/ProyectoFinalHotel2/src/java/Servlets/SvConsultaEmpleadoReserva.java</file>
         </group>

@@ -443,6 +443,40 @@ h6 {
 .btn--red:hover {
   background: #604C28;
 }
+/*
+==========================================
+
+edits mios
+
+=========================================
+*/
+
+.id_huesped{
+    width: 70%;
+    height: 100%;
+    border-radius: 5px;
+    outline: none;
+    background:#e5e5e5;
+    border: none;
+}
+
+.div_select{
+    height: 30px;
+}
+
+.flecha {
+    margin-top: 15px;
+}
+
+.fa-arrow-left{
+    color: #6F582F;
+    transition: color 0.5s;
+}
+.fa-arrow-left:hover{
+    color:#604C28;
+}
+
+
 
 /* ==========================================================================
    #DATE PICKER

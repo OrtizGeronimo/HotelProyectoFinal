@@ -35,6 +35,8 @@ public class SvConsultaHuespedReserva extends HttpServlet {
         HttpSession mySession = request.getSession();
         List<Reserva> listaReservas = new ArrayList<>();
         request.getSession().setAttribute("listaReservas", listaReservas);
+        request.getSession().setAttribute("fechaDesde", "");
+        request.getSession().setAttribute("fechaHasta", "");
         mySession.setAttribute("listaHuesped", listaHuesped);
         response.sendRedirect("ver_reservas_huespedes.jsp");
 
