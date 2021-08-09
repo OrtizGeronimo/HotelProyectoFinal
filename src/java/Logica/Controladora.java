@@ -3,6 +3,9 @@ package Logica;
 import Persistencia.ControladoraPersistencia;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -35,6 +38,17 @@ public class Controladora {
 
     }
 
+    public long calcularMonto(Reserva reserva) {
+
+        LocalDate fechaCheckIn = reserva.getFechaCheckIn().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+        LocalDate fechaCheckOut = reserva.getFechaCheckOut().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+        int precioXNoche = reserva.getHabitacion().getPrecioXNoche();
+        long cantDias = ChronoUnit.DAYS.between(fechaCheckIn, fechaCheckOut);
+        
+        return precioXNoche*cantDias;
+    }
+
+
     /*
         ALTAS
      */
@@ -66,7 +80,7 @@ public class Controladora {
         control.altaEmpleado(e);
     }
 
-    public boolean altaReserva(int idUsuario, int idHuesped, Date fechaCheckIn, Date fechaCheckOut, int cantidad, String tipo, Date fechaCreacion) {
+    public Reserva altaReserva(int idUsuario, int idHuesped, Date fechaCheckIn, Date fechaCheckOut, int cantidad, String tipo, Date fechaCreacion) {
 
         boolean hacerReserva = true;
         Habitacion habitacion = null;
@@ -81,7 +95,7 @@ public class Controladora {
                         hacerReserva = false;
                         break;
                     }
-                    
+
                 }
             } else {
                 hacerReserva = false;
@@ -112,9 +126,9 @@ public class Controladora {
             control.modificarHuesped(h);
             control.modificarHabitacion(habitacion);
 
-            return true;
+            return reserva;
         } else {
-            return false;
+            return null;
         }
 
     }
@@ -213,22 +227,23 @@ public class Controladora {
     public List<Reserva> traerReservas() {
         return control.traerReservas();
     }
+
     public List<Reserva> traerReservasPeriodo(Huesped h, String fechaDesde, String fechaHasta) {
         SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
         Date desde = new Date();
         Date hasta = new Date();
         try {
-             desde = formato.parse(fechaDesde);
-             hasta = formato.parse(fechaHasta);
+            desde = formato.parse(fechaDesde);
+            hasta = formato.parse(fechaHasta);
         } catch (ParseException ex) {
             Logger.getLogger(Controladora.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
         List<Reserva> listaReservaPeriodo = new ArrayList<>();
         for (Reserva reservas : h.getListaReservas()) {
             if ((reservas.getFechaCreacionReserva().after(desde) || formato.format(reservas.getFechaCreacionReserva()).equals(formato.format(desde))) && (reservas.getFechaCreacionReserva().before(hasta) || formato.format(reservas.getFechaCreacionReserva()).equals(formato.format(hasta)))) {
                 listaReservaPeriodo.add(reservas);
-            } 
+            }
         }
         return listaReservaPeriodo;
     }
@@ -258,7 +273,5 @@ public class Controladora {
     public void modificarEmpleado(Empleado e) {
         control.modificarEmpleado(e);
     }
-
-    
 
 }

@@ -11,7 +11,9 @@
     
     <div class='content'>
         <div class='fa fa-check-circle-o symbol'></div>
-        <div class='title'>Registro Exitoso</div>
+        <div class='title'><h3>Reserva realizada con éxito!</h3></div>
+        <div class='title'>Habitación número <%= request.getSession().getAttribute("habitacion")%> - Piso <%=request.getSession().getAttribute("piso")%> </div>
+        <div class='title'>Monto total a pagar: $<%= request.getSession().getAttribute("monto")%> </div>
         <a href="inicio.jsp" class="volver">Volver</a>
         <div class='text'></div>
     </div>

@@ -1,6 +1,7 @@
 package Servlets;
 
 import Logica.Controladora;
+import Logica.Reserva;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.ParseException;
@@ -47,9 +48,15 @@ public class SvAltaReserva extends HttpServlet {
             Date fechaActual = new Date();
             
             formato.format(fechaActual);
-            boolean reservo = control.altaReserva(idUsuario,idHuesped,fechaCheckIn,fechaCheckOut,cantidad,tipo,fechaActual);
-            if (reservo) {
+            
+            Reserva reserva = control.altaReserva(idUsuario,idHuesped,fechaCheckIn,fechaCheckOut,cantidad,tipo,fechaActual);
+            long montoTotal = control.calcularMonto(reserva);
+            if (reserva != null) {
                 response.sendRedirect("registro_exitoso.jsp");
+                request.getSession().setAttribute("habitacion", reserva.getHabitacion().getNum());
+                request.getSession().setAttribute("piso", reserva.getHabitacion().getPiso());
+                request.getSession().setAttribute("monto", montoTotal);
+                
             } else {
                 response.sendRedirect("error_reserva.jsp");
                 request.getSession().setAttribute("tipo", tipo);
