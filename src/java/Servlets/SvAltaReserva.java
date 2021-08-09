@@ -50,8 +50,9 @@ public class SvAltaReserva extends HttpServlet {
             formato.format(fechaActual);
             
             Reserva reserva = control.altaReserva(idUsuario,idHuesped,fechaCheckIn,fechaCheckOut,cantidad,tipo,fechaActual);
-            long montoTotal = control.calcularMonto(reserva);
+           
             if (reserva != null) {
+                 long montoTotal = control.calcularMonto(reserva);
                 response.sendRedirect("registro_exitoso.jsp");
                 request.getSession().setAttribute("habitacion", reserva.getHabitacion().getNum());
                 request.getSession().setAttribute("piso", reserva.getHabitacion().getPiso());

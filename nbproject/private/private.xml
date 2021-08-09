@@ -5,10 +5,11 @@
         <group>
             <file>file:/C:/Users/yeron/Documents/NetBeansProjects/ProyectoFinalHotel2/src/java/Servlets/SvAltaReserva.java</file>
             <file>file:/C:/Users/yeron/Documents/NetBeansProjects/ProyectoFinalHotel2/src/java/Logica/Controladora.java</file>
-            <file>file:/C:/Users/yeron/Documents/NetBeansProjects/ProyectoFinalHotel2/src/java/Servlets/SvReservas.java</file>
-            <file>file:/C:/Users/yeron/Documents/NetBeansProjects/ProyectoFinalHotel2/src/java/Servlets/SvReservasHuesped.java</file>
-            <file>file:/C:/Users/yeron/Documents/NetBeansProjects/ProyectoFinalHotel2/src/java/Servlets/SvConsultaHuespedReserva.java</file>
-            <file>file:/C:/Users/yeron/Documents/NetBeansProjects/ProyectoFinalHotel2/src/java/Servlets/SvConsultaEmpleadoReserva.java</file>
+            <file>file:/C:/Users/yeron/Documents/NetBeansProjects/ProyectoFinalHotel2/src/java/Logica/Huesped.java</file>
+            <file>file:/C:/Users/yeron/Documents/NetBeansProjects/ProyectoFinalHotel2/src/java/Logica/Empleado.java</file>
+            <file>file:/C:/Users/yeron/Documents/NetBeansProjects/ProyectoFinalHotel2/src/java/Persistencia/ControladoraPersistencia.java</file>
+            <file>file:/C:/Users/yeron/Documents/NetBeansProjects/ProyectoFinalHotel2/src/java/Servlets/SvLogin.java</file>
+            <file>file:/C:/Users/yeron/Documents/NetBeansProjects/ProyectoFinalHotel2/src/java/Servlets/SvCerrarSesion.java</file>
         </group>
     </open-files>
 </project-private>
